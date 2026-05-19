@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run *)",
+      "Bash(cp /Users/samarthrao/Projects/Lightningclone/src/vanta.globe.min.js /Users/samarthrao/Projects/Lightningclone/public/vanta.globe.min.js)",
+      "Bash(mkdir -p /Users/samarthrao/Projects/Lightningclone/public)"
+    ]
+  }
+}
