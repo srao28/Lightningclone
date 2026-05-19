@@ -1,5 +1,5 @@
 <script>
-  import { onMount, onDestroy } from 'svelte';
+  import { onMount, onDestroy, tick } from 'svelte';
   import logo from './logo_t.png';
   import thundrPhone from './thundr-phone.png';
 
@@ -7,9 +7,10 @@
   let vantaEffect;
 
   onMount(async () => {
+    await tick();
+    await new Promise(r => requestAnimationFrame(r));
     const THREE = await import('three');
-    const VANTA = window.VANTA.GLOBE;
-    vantaEffect = VANTA({
+    vantaEffect = window.VANTA.GLOBE({
       el: vantaEl,
       THREE,
       mouseControls: false,
@@ -18,16 +19,26 @@
       minHeight: 200,
       minWidth: 200,
       scale: 1,
-      scaleMobile: 10,
+      scaleMobile: 1,
       color: 0xfde047,
       color2: 0xfacc15,
-      backgroundColor: 0x0d1b4b,
-      size: 1,
+      backgroundColor: 0x000a28,
+      size: 1.2,
       maxDistance: 1,
       points: 0,
-      
     });
 
+    // Vanta's camera hardcodes lookAt(-40,0,0) every frame, shifting the globe
+    // off-center to the right. Override it to look at the globe's actual center (0,15,0).
+    if (vantaEffect?.camera) {
+      vantaEffect.camera.position.set(0, 15, 170);
+      const _onUpdate = vantaEffect.onUpdate.bind(vantaEffect);
+      vantaEffect.onUpdate = function() {
+        const r = _onUpdate.call(this);
+        this.camera.lookAt(0, 15, 0);
+        return r;
+      };
+    }
   });
 
   onDestroy(() => {
@@ -51,16 +62,17 @@
 </nav>
 
 <section class="black hero">
-  <div class="vanta-globe" bind:this={vantaEl}></div>
-  <div class="hero-inner">
-    <div class="content">
-      <h1>Innovating the Future of<br>Social Technology</h1>
-      <p>Lightningware is a next-generation software publisher creating social technology that redefines how people connect. We develop groundbreaking applications, designed to spark real conversations and foster meaningful interactions.</p>
-      <button class="hex-btn">Contact Us</button>
+  <div class="globesec">
+    <div class="hero-inner">
+      <div class="content">
+        <h1><span class="h1-line">Innovating the <span class="yellow">Future</span></span><span class="h1-line">of Social Technology</span></h1>
+        <p>Lightningware is a next-generation software publisher creating social technology that redefines how people connect. We develop groundbreaking applications, designed to spark real conversations and foster meaningful interactions.</p>
+        <div class="hex-ghost-wrap">
+          <button class="hex-ghost-btn">Contact Us</button>
+        </div>
+      </div>
     </div>
-    <div class="content">
-
-    </div>
+    <div class="vanta-globe" bind:this={vantaEl}></div>
   </div>
 </section>
 
@@ -150,29 +162,34 @@
   nav {
     position: fixed;
     top: 0;
-    left: 0;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
     z-index: 100;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0 2rem;
-    height: 64px;
-    background: transparent;
+    height: 72px;
+    background: #001f7f;
     backdrop-filter: blur(10px);
     -webkit-backdrop-filter: blur(10px);
+    clip-path: polygon(4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%, 0% 50%);
   }
 
   .nav-left {
     position: absolute;
-    left: 2rem;
+    left: calc(4% + 10px);
     display: flex;
-    align-items: center;
+    align-items: stretch;
+    height: 100%;
+    padding: 0;
   }
 
   .nav-logo {
-    height: 36px;
+    height: 72px;
     width: auto;
+    display: block;
   }
 
   .nav-center {
@@ -183,7 +200,7 @@
 
   .nav-right {
     position: absolute;
-    right: 2rem;
+    right: calc(4% + 10px);
   }
 
   /* Hexagon shape via flat-top clip-path */
@@ -208,8 +225,48 @@
   nav button:hover {
     background: transparent;
     color: #facc15;
-    
+
     text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    nav {
+      padding: 0 1rem;
+      justify-content: space-between;
+    }
+
+    .nav-left {
+      position: static;
+    }
+
+    .nav-center {
+      gap: 0;
+    }
+
+    .nav-center button {
+      font-size: 0.7rem;
+      padding: 0.4rem 0.5rem;
+      letter-spacing: 0;
+    }
+
+    .nav-right {
+      position: static;
+    }
+
+    .nav-right .hex-btn {
+      font-size: 0.7rem;
+      padding: 0.65rem 0.6rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .nav-center {
+      display: none;
+    }
+
+    .nav-right {
+      margin-left: auto;
+    }
   }
 
   /* nav button.contact {
@@ -222,20 +279,34 @@
     background: rgba(255, 255, 255, 0.85);
   } */
 
+  :global(*, *::before, *::after) {
+    font-family: 'Exo 2', sans-serif;
+    box-sizing: border-box;
+  }
+
   section {
     height: 100vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    section.hero {
+      height: auto;
+      min-height: 100vh;
+      overflow: visible;
+    }
   }
 
   section.black {
-    background: #0d1b4b;
+    background: #030d22;
     color: #fff;
   }
 
   section.blue {
-    background: #002366;
+    background: #001f7f;
     color: #fff;
   }
 
@@ -252,55 +323,86 @@ h2 {
     font-weight: 700;
     letter-spacing: -0.02em;
   }
-
-  .hero {
-    position: relative;
-    justify-content: center;
+.globesec {
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    overflow: visible;
-    height: 80vh;
-    width: 80vw;
-    
-  }
-
-  .vanta-globe {
-    position: absolute;
-    top: 0;
-    left: 0;
+    justify-content: center;
     width: 100%;
     height: 100%;
-    z-index: 1;
+    padding: 72px 5rem 0;
+    gap: 2rem;
   }
 
   .hero-inner {
-    position: relative;
+    flex: 1;
+    min-width: 0;
     z-index: 2;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    width: 80%;
+  }
+
+  .vanta-globe {
+    flex-shrink: 0;
+    width: min(80vh, 46vw);
+    height: min(80vh, 46vw);
+    position: relative;
+    overflow: hidden;
+  }
+
+  @media (max-width: 768px) {
+    .globesec {
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 88px 1.5rem 0;
+      gap: 1rem;
+      overflow-y: auto;
+    }
+
+    .hero-inner {
+      flex: none;
+      width: 100%;
+    }
+
+    .vanta-globe {
+      width: min(70vw, 70vw);
+      height: min(70vw, 70vw);
+      flex-shrink: 0;
+    }
+
+    .hero .content {
+      max-width: 100%;
+    }
+
+    .hero h1 {
+      font-size: 2.2rem;
+    }
   }
 
   .hero .content {
     text-align: left;
     align-items: flex-start;
+    
     max-width: 560px;
   }
 
   .hero h1 {
-    font-size: 3.5rem;
-    font-weight: 800;
-    margin: 0 0 1.5rem;
+    font-size: clamp(2rem, 3vw, 3rem);
+    font-weight: 300;
+    margin: 0 0 1.25rem;
     line-height: 1.15;
-    letter-spacing: -0.03em;
+    letter-spacing: -0.02em;
+  }
+
+  .h1-line {
+    display: block;
   }
 
   .hero p {
-    font-size: 1.15rem;
+    font-size: 1rem;
+    font-weight: 400;
     line-height: 1.7;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.65);
     margin: 0;
-  }
+  } 
 
   .about {
     justify-content: center;
@@ -323,7 +425,7 @@ h2 {
     font-weight: 600;
     letter-spacing: 0.15em;
   
-    color: #fde047
+    color: #facc15
   }
 
   .about-content h1 {
@@ -450,8 +552,37 @@ h2 {
   }
 
   .hex-btn:hover {
-    background: #fde047;
+    background: #facc15;
     transform: scale(1.04);
+  }
+
+  .hex-ghost-wrap {
+    display: inline-flex;
+    background: #facc15;
+    clip-path: polygon(12% 0%, 88% 0%, 100% 50%, 88% 100%, 12% 100%, 0% 50%);
+    padding: 2px;
+    margin-top: 0.5rem;
+    transition: transform 0.15s;
+  }
+
+  .hex-ghost-wrap:hover {
+    transform: scale(1.04);
+  }
+
+  .hex-ghost-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: #030d22;
+    color: #facc15;
+    border: none;
+    font-size: 1rem;
+    font-weight: 700;
+    padding: 1rem 1.5rem;
+    cursor: pointer;
+    letter-spacing: 0.04em;
+    white-space: nowrap;
+    clip-path: polygon(13% 0%, 87% 0%, 99% 50%, 87% 100%, 13% 100%, 1% 50%);
   }
 
   .hex-btn--sm {
