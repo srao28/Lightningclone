@@ -245,6 +245,10 @@
       margin-left: auto;
     }
 
+    .nav-right :global(.nav-contact-btn) {
+      display: none;
+    }
+
     .nav-right .hamburger {
       display: flex;
     }
