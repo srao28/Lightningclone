@@ -72,23 +72,30 @@
   @media (max-width: 430px) {
     .about-split {
       flex-direction: column;
-      padding: 2rem 1.25rem;
-      gap: 2rem;
+      padding: 2rem 1.25rem 0;
+      gap: 0;
       overflow: hidden;
-    }
-
-    .about-img {
-      position: static;
-      width: 100%;
-      height: auto;
-      max-height: 340px;
-      object-fit: contain;
-      order: 2;
+      position: relative;
     }
 
     .about-text {
       max-width: 100%;
-      order: 1;
+      position: relative;
+      z-index: 2;
+      background: rgba(3, 13, 34, 0.75);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: -60px;
+    }
+
+    .about-img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: contain;
+      object-position: bottom;
     }
   }
 </style>
