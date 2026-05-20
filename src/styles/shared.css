@@ -1,0 +1,159 @@
+/* ── Eyebrow label ── */
+.eyebrow {
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: #facc15;
+  margin: 0;
+}
+
+/* ── Yellow accent ── */
+.yellow {
+  color: #facc15;
+}
+
+/* ── Box card units (Roadmap + Pillars) ── */
+.box-unit {
+  position: relative;
+  width: 325px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gif-box {
+  position: relative;
+  z-index: 2;
+  width: 200px;
+  height: 100px;
+  background: #030d22;
+  border: 1.5px solid #1a358c;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  margin-bottom: -2rem;
+}
+
+.text-box {
+  position: relative;
+  z-index: 1;
+  width: 325px;
+  height: 200px;
+  background: rgba(3, 13, 34, 0.85);
+  border: 1.5px solid #1a358c;
+  border-radius: 8px;
+  padding: 1.75rem 1.25rem 1rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.box-title {
+  margin-top: 1rem;
+  font-size: 20px;
+  font-weight: 700;
+  color: #facc15;
+  letter-spacing: 0.05em;
+}
+
+.box-desc {
+  font-size: 18px;
+  height: 81px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.65);
+  margin: 0;
+  padding: 5px;
+}
+
+/* ── Hex buttons ── */
+.hex-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #facc15;
+  color: #000;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1.5rem 1.25rem;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  clip-path: polygon(12% 0%, 88% 0%, 100% 50%, 88% 100%, 12% 100%, 0% 50%);
+  transition: background 0.15s, transform 0.15s;
+  white-space: nowrap;
+  margin-top: 0.5rem;
+}
+
+.hex-btn:hover {
+  background: #facc15;
+  transform: scale(1.04);
+}
+
+.hex-ghost-wrap {
+  display: inline-flex;
+  background: #facc15;
+  clip-path: polygon(12% 0%, 88% 0%, 100% 50%, 88% 100%, 12% 100%, 0% 50%);
+  padding: 2px;
+  margin-top: 0.5rem;
+  transition: transform 0.15s;
+}
+
+.hex-ghost-wrap:hover {
+  transform: scale(1.04);
+}
+
+.hex-ghost-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #030d22;
+  color: #facc15;
+  border: none;
+  font-size: 1rem;
+  font-weight: 700;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  clip-path: polygon(13% 0%, 87% 0%, 99% 50%, 87% 100%, 13% 100%, 1% 50%);
+}
+
+.hex-btn--sm {
+  width: auto;
+  padding: 1.5rem 2rem;
+}
+
+.hex-btn--social {
+  height: 32px;
+  width: 32px;
+  padding: 0.5rem 0.55rem;
+  margin-top: 0;
+}
+
+/* ── Product badges ── */
+.coming-soon {
+  color: rgba(255, 255, 255, 0.45) !important;
+  cursor: default !important;
+}
+
+.coming-soon:hover {
+  background: transparent !important;
+  color: rgba(255, 255, 255, 0.45) !important;
+}
+
+.badge {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #facc15;
+  background: rgba(250, 204, 21, 0.15);
+  border: 1px solid rgba(250, 204, 21, 0.4);
+  border-radius: 4px;
+  padding: 0.1rem 0.35rem;
+}
