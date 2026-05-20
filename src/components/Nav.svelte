@@ -1,6 +1,7 @@
 <script>
   import { createEventDispatcher } from 'svelte';
   import logo from '../images/logo.png';
+  import HexButton from './HexButton.svelte';
 
   export let currentPage = 'home';
 
@@ -22,25 +23,27 @@
   }
 </script>
 
-<nav>
-  <div class="nav-left">
-    <img src={logo} alt="Lightningware" class="nav-logo" />
-  </div>
-  <div class="nav-center">
-    <button class:active={currentPage === 'home'} on:click={() => navigate('home')}>Home</button>
-    <button class:active={currentPage === 'about'} on:click={() => navigate('about')}>About Us</button>
-    <button class:active={currentPage === 'products'} on:click={() => navigate('products')}>Product</button>
-    <button>Support</button>
-  </div>
-  <div class="nav-right">
-    <button class="hex-btn">Contact Us</button>
-    <button class="hamburger" on:click={toggleMenu} aria-label="Toggle menu">
-      <span class="bar" class:open={menuOpen}></span>
-      <span class="bar" class:open={menuOpen}></span>
-      <span class="bar" class:open={menuOpen}></span>
-    </button>
-  </div>
-</nav>
+<div class="nav-wrapper">
+  <nav>
+    <div class="nav-left">
+      <img src={logo} alt="Lightningware" class="nav-logo" />
+    </div>
+    <div class="nav-center">
+      <button class:active={currentPage === 'home'} on:click={() => navigate('home')}>Home</button>
+      <button class:active={currentPage === 'about'} on:click={() => navigate('about')}>About Us</button>
+      <button class:active={currentPage === 'products'} on:click={() => navigate('products')}>Products</button>
+      <button>Support</button>
+    </div>
+    <div class="nav-right">
+      <HexButton variant="nav" on:click={() => window.location.href = 'mailto:support@thundr.com'}>Contact Us</HexButton>
+      <button class="hamburger" on:click={toggleMenu} aria-label="Toggle menu">
+        <span class="bar" class:open={menuOpen}></span>
+        <span class="bar" class:open={menuOpen}></span>
+        <span class="bar" class:open={menuOpen}></span>
+      </button>
+    </div>
+  </nav>
+</div>
 
 {#if menuOpen}
   <div class="mobile-overlay" role="button" tabindex="-1" on:click={closeMenu} on:keydown={closeMenu}></div>
@@ -55,35 +58,39 @@
 <style>
   @import '../styles/shared.css';
 
-  nav {
+  .nav-wrapper {
     position: fixed;
-    top: 2.5%;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 90%;
+    top: 0;
+    left: 0;
+    width: 100%;
     z-index: 100;
+    height: 5rem;
+    pointer-events: none;
+  }
+
+  nav {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
     display: flex;
     align-items: center;
-    justify-content: center;
-    padding: 2rem 2rem;
-    height: 5rem;
+    justify-content: space-between;
+    padding: 0 5rem;
     background: #001f7f;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    clip-path: polygon(4% 0%, 96% 0%, 100% 50%, 96% 100%, 4% 100%, 0% 50%);
+    pointer-events: all;
+    clip-path: polygon(40px 0%, calc(100% - 40px) 0%, 100% 50%, calc(100% - 40px) 100%, 40px 100%, 0% 50%);
   }
 
   .nav-left {
-    position: absolute;
-    left: calc(4% + 10px);
     display: flex;
-    align-items: stretch;
-    height: 100%;
-    padding: 0;
+    align-items: center;
+    flex-shrink: 0;
   }
 
   .nav-logo {
-    height: auto;
+    height: 80px;
     width: auto;
     display: block;
   }
@@ -95,18 +102,13 @@
   }
 
   .nav-right {
-    position: absolute;
-    right: calc(4% + 10px);
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    pointer-events: all;
   }
 
-  .nav-right .hex-btn {
-    font-size: 0.9rem;
-    font-weight: 400;
-    width: 15vb;
-    padding: 0.6rem 0.65rem;
-  }
-
-  nav button {
+  .nav-center button {
     position: relative;
     display: inline-flex;
     align-items: center;
@@ -122,13 +124,13 @@
     white-space: nowrap;
   }
 
-  nav button:hover {
+  .nav-center button:hover {
     background: transparent;
     color: #facc15;
     text-decoration: underline;
   }
 
-  nav button.active {
+  .nav-center button.active {
     color: #facc15;
     text-decoration: underline;
   }
@@ -232,10 +234,6 @@
       position: static;
     }
 
-    .nav-right .hex-btn {
-      font-size: 0.5rem;
-      padding: 0.75rem 0.75rem;
-    }
   }
 
   @media (max-width: 480px) {
@@ -245,10 +243,6 @@
 
     .nav-right {
       margin-left: auto;
-    }
-
-    .nav-right .hex-btn {
-      display: none;
     }
 
     .nav-right .hamburger {
@@ -266,17 +260,8 @@
   }
 
   @media (max-width: 425px) {
-    nav {
-      width: 95%;
-      top: 1%;
-    }
-
     .nav-right .hamburger {
       display: flex;
-    }
-
-    .nav-right .hex-btn {
-      display: none;
     }
 
     .mobile-menu {
