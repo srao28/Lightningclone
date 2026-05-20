@@ -12,7 +12,3 @@ dist
 # Dev screenshots
 *.png
 
-# Design/planning docs
-about-us-page.md
-about-us-sections/
-refactor-plan.md
