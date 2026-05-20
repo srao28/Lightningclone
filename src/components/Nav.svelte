@@ -62,8 +62,9 @@
   .nav-wrapper {
     position: fixed;
     top: 0;
-    left: 0;
-    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 90%;
     z-index: 100;
     height: 5rem;
     pointer-events: none;
@@ -81,7 +82,7 @@
     padding: 0 5rem;
     background: #001f7f;
     pointer-events: all;
-    clip-path: polygon(40px 0%, calc(100% - 40px) 0%, 100% 50%, calc(100% - 40px) 100%, 40px 100%, 0% 50%);
+    clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 50%, calc(100% - 20px) 100%, 20px 100%, 0% 50%);
   }
 
   .nav-left {
