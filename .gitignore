@@ -6,6 +6,7 @@ dist
 # Claude/MCP artifacts
 .claude/
 .playwright-mcp/
+.playwright-cli/
 .mcp.json
 
 # Dev screenshots
