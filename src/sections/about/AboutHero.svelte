@@ -11,11 +11,12 @@
   .hero-outer {
     width: 100%;
     background: #000a28;
-    padding: 130px 20px 0;
+    padding: 0 20px 0;
+    margin-top: 5rem;
   }
 
   .hero-card {
-    width: 100%;
+    width: 85%;
     background: #001f7f;
     border-radius: 16px;
     display: flex;
@@ -24,8 +25,9 @@
     justify-content: center;
     gap: 1rem;
     text-align: center;
-    padding: 5rem 2rem;
-    min-height: 270px;
+    padding: 2rem 2rem;
+    min-height: 400px;
+    margin: 0 auto;
   }
 
   h1 {
