@@ -12,7 +12,7 @@
     width: 100%;
     background: #000a28;
     padding: 1rem 20px 2rem;
-    margin-top: 5rem;
+    margin-top: 6rem;
     height: auto;
     min-height: unset;
     display: block;
