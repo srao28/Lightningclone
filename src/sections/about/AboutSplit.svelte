@@ -17,6 +17,8 @@
 
   .about-split {
     width: 100%;
+    height: auto;
+    min-height: unset;
     background: #030d22;
     display: flex;
     align-items: center;
@@ -69,23 +71,24 @@
 
   @media (max-width: 430px) {
     .about-split {
-      position: relative;
+      flex-direction: column;
+      padding: 2rem 1.25rem;
+      gap: 2rem;
       overflow: hidden;
-      padding: 2rem 1.25rem 2rem;
-      gap: 0;
     }
 
     .about-img {
-      position: absolute;
-      right: -60px;
-      bottom: 0;
-      height: 320px;
-      width: auto;
+      position: static;
+      width: 100%;
+      height: auto;
+      max-height: 340px;
       object-fit: contain;
+      order: 2;
     }
 
     .about-text {
       max-width: 100%;
+      order: 1;
     }
   }
 </style>
