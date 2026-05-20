@@ -45,6 +45,9 @@
 
   .pillars {
     width: 100%;
+    height: auto;
+    min-height: unset;
+    overflow: visible;
     background: transparent;
     display: flex;
     justify-content: space-evenly;
@@ -66,7 +69,7 @@
       align-items: center;
       padding: 2rem 1.25rem 3rem;
       gap: 2rem;
-      margin-top: 0;
+      margin-top: -80px;
     }
 
     .box-unit {

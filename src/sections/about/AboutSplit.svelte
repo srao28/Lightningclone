@@ -17,6 +17,8 @@
 
   .about-split {
     width: 100%;
+    height: auto;
+    min-height: unset;
     background: #030d22;
     display: flex;
     align-items: center;
@@ -69,23 +71,31 @@
 
   @media (max-width: 430px) {
     .about-split {
-      position: relative;
-      overflow: hidden;
-      padding: 2rem 1.25rem 2rem;
+      flex-direction: column;
+      padding: 2rem 1.25rem 0;
       gap: 0;
-    }
-
-    .about-img {
-      position: absolute;
-      right: -60px;
-      bottom: 0;
-      height: 320px;
-      width: auto;
-      object-fit: contain;
+      overflow: hidden;
+      position: relative;
     }
 
     .about-text {
       max-width: 100%;
+      position: relative;
+      z-index: 2;
+      background: rgba(3, 13, 34, 0.75);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: -60px;
+    }
+
+    .about-img {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      height: auto;
+      max-height: 380px;
+      object-fit: contain;
+      object-position: bottom;
     }
   }
 </style>

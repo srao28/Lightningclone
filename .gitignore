@@ -6,12 +6,9 @@ dist
 # Claude/MCP artifacts
 .claude/
 .playwright-mcp/
+.playwright-cli/
 .mcp.json
 
 # Dev screenshots
 *.png
 
-# Design/planning docs
-about-us-page.md
-about-us-sections/
-refactor-plan.md
