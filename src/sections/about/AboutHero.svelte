@@ -11,8 +11,7 @@
   .hero-outer {
     width: 100%;
     background: #000a28;
-    padding: 0 20px 0;
-    margin-top: 5rem;
+    padding: 5rem 20px 0;
   }
 
   .hero-card {
