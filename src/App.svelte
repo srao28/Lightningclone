@@ -1,7 +1,7 @@
 <script>
   import { onMount, onDestroy, tick } from 'svelte';
   import logo from './images/logo.png';
-  import thundrPhone from './images/thundr-phone.png';
+  import thundrPhone from './images/product-phone.png';
   import goldCircle from './images/gold-circle.png';
   import gifVR from './images/virtual-reality.gif';
   import gifLove from './images/love.gif';
@@ -10,6 +10,7 @@
   let vantaEl;
   let vantaEffect;
   let menuOpen = false;
+  let productsOpen = false;
 
   function toggleMenu() {
     menuOpen = !menuOpen;
@@ -17,6 +18,10 @@
 
   function closeMenu() {
     menuOpen = false;
+  }
+
+  function toggleProducts() {
+    productsOpen = !productsOpen;
   }
 
   onMount(async () => {
@@ -105,9 +110,10 @@
   <button on:click={closeMenu}>Support</button>
 </div>
 
-<section class="black hero">
+<!-- Landing: full-screen intro with animated globe and primary tagline -->
+<section class="black landing">
   <div class="globesec">
-    <div class="hero-inner">
+    <div class="landing-inner">
       <div class="content">
         <h1><span class="h1-line">Innovating the <span class="yellow">Future</span></span><span class="h1-line">of Social Technology</span></h1>
         <p>Lightningware is a next-generation software publisher creating social technology that redefines how people connect. We develop groundbreaking applications, designed to spark real conversations and foster meaningful interactions.</p>
@@ -120,8 +126,9 @@
   </div>
 </section>
 
-<section class="blue about">
-  <div class="about-content">
+<!-- Mission: who we are and what makes us different from an agency -->
+<section class="blue mission">
+  <div class="mission-content">
     <span class="eyebrow">What we do</span>
     <h1>About <span class="yellow">Lightningware</span></h1>
     <p>We're not an agency. We don't build software for clients. We create and launch our own products, shaping the future of digital interactions.</p>
@@ -130,14 +137,15 @@
   </div>
 </section>
 
-<section class="black thundr">
-  <div class="thundr-inner">
-    <div class="thundr-text">
+<!-- Product spotlight: Thundr stats, description, and product dropdown -->
+<section class="black product">
+  <div class="product-inner">
+    <div class="product-text">
       <span class="eyebrow">Thundr</span>
-      <h1 class="thundr-h1"><span class="h1-line">A human search engine</span><span class="h1-line">for real <span class="yellow">connections.</span></span></h1>
-      <p class="thundr-desc">Thundr is a revolutionary social platform that allows users to meet and talk to new people worldwide. With AI-powered moderation and a seamless user experience, Thundr makes conversations effortless, safe, and engaging.</p>
+      <h1 class="product-h1"><span class="h1-line">A human search engine</span><span class="h1-line">for real <span class="yellow">connections.</span></span></h1>
+      <p class="product-desc">Thundr is a revolutionary social platform that allows users to meet and talk to new people worldwide. With AI-powered moderation and a seamless user experience, Thundr makes conversations effortless, safe, and engaging.</p>
 
-      <div class="thundr-stats">
+      <div class="product-stats">
         <div class="stat">
           <span class="stat-num">8 M+</span>
           <span class="stat-label">Monthly Visits</span>
@@ -148,9 +156,20 @@
           <span class="stat-label">Daily Visits</span>
         </div>
       </div>
-      <button class="hex-btn hex-btn--sm">Our Products</button>
+      <div class="products-dropdown">
+        <button class="hex-btn hex-btn--sm" on:click={toggleProducts}>
+          Our Products <span class="dropdown-arrow" class:open={productsOpen}>▾</span>
+        </button>
+        {#if productsOpen}
+          <ul class="products-list">
+            <li>Thundr</li>
+            <li class="coming-soon">Dating App <span class="badge">Soon</span></li>
+            <li class="coming-soon">AI Platform <span class="badge">Soon</span></li>
+          </ul>
+        {/if}
+      </div>
     </div>
-    <img src={thundrPhone} alt="Thundr app on phone" class="thundr-phone" />
+    <img src={thundrPhone} alt="Thundr app on phone" class="product-phone" />
   </div>
 </section>
 
@@ -186,11 +205,15 @@
           </div>
         </div>
       </div>
+      
     </div>
-  
+    <div class="roadmap-cta">
+            <p>Want to <span class="yellow">collaborate</span>? Let's talk.</p>
+            <button class="hex-btn">Contact Us</button>
+          </div>
 </section>
 
-<section class="black footer-section">
+<section class="black site-footer">
   <div class="footer-inner">
     <div class="footer-top">
       
@@ -360,6 +383,12 @@
     background: rgba(255, 255, 255, 0.85);
   } */
 
+  :global(html, body) {
+    margin: 0;
+    padding: 0;
+    background: #030d22;
+  }
+
   :global(*, *::before, *::after) {
     font-family: 'Exo 2', sans-serif;
     box-sizing: border-box;
@@ -374,7 +403,7 @@
   }
 
   @media (max-width: 768px) {
-    section.hero {
+    section.landing {
       height: auto;
       min-height: 100vh;
       overflow: visible;
@@ -384,6 +413,8 @@
   section.black {
     background: #030d22;
     color: #fff;
+    display: flex;
+    flex-direction: column;
   }
 
   section.blue {
@@ -401,6 +432,8 @@
   .roadmap {
     position: relative;
     overflow: visible;
+    height: auto;
+    min-height: 100vh;
   }
 
   
@@ -531,7 +564,27 @@
     letter-spacing: -0.03em;
   }
 
-  @media (max-width: 425px) {
+  .roadmap-cta {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 5rem;
+  }
+
+  .roadmap-cta p {
+    font-size: 36px;
+    font-weight: 300;
+    line-height: 1.35;
+    color: #fff;
+    margin: 0;
+    letter-spacing: -0.03em;
+  }
+
+  @media (max-width: 430px) {
     .roadmap {
       height: auto;
       min-height: 100vh;
@@ -582,7 +635,7 @@
     gap: 2rem;
   }
 
-  .hero-inner {
+  .landing-inner {
     flex: 1;
     min-width: 0;
     z-index: 2;
@@ -605,7 +658,7 @@
       overflow-y: auto;
     }
 
-    .hero-inner {
+    .landing-inner {
       flex: none;
       width: 100%;
     }
@@ -616,22 +669,22 @@
       flex-shrink: 0;
     }
 
-    .hero .content {
+    .landing .content {
       max-width: 100%;
     }
 
-    .hero h1 {
+    .landing h1 {
       font-size: 2.2rem;
     }
   }
 
-  .hero .content {
+  .landing .content {
     text-align: left;
     align-items: flex-start;
     max-width: 560px;
   }
 
-  .hero h1 {
+  .landing h1 {
     font-size: clamp(2rem, 3vw, 3rem);
     font-weight: 300;
     margin: 0 0 1.25rem;
@@ -643,7 +696,7 @@
     display: block;
   }
 
-  .hero p {
+  .landing p {
     font-size: 1rem;
     font-weight: 400;
     line-height: 1.7;
@@ -651,13 +704,13 @@
     margin: 0;
   } 
 
-  .about {
+  .mission {
     justify-content: center;
     align-items: center;
     height: 70vh;
   }
 
-  .about-content {
+  .mission-content {
     max-width: 700px;
     text-align: center;
     padding: 0 2rem;
@@ -675,7 +728,7 @@
     margin-bottom: -1.5rem;
   }
 
-  .about-content h1 {
+  .mission-content h1 {
     font-size: clamp(2rem, 4vw, 3.25rem);
     font-weight: 500;
     margin: 0;
@@ -688,7 +741,7 @@
     color: #facc15;
   }
 
-  .about-content p {
+  .mission-content p {
     font-size: 1.15rem;
     line-height: 1.75;
     color: rgba(255, 255, 255, 0.8);
@@ -696,13 +749,13 @@
     max-width: 60ch;
   }
 
-  .thundr {
+  .product {
     justify-content: center;
     align-items: center;
     width: 100%;
   }
 
-  .thundr-inner {
+  .product-inner {
     display: flex;
     align-items: center;
     
@@ -711,14 +764,14 @@
     padding: 0 2rem;
   }
 
-  .thundr-text {
+  .product-text {
     flex: 1;
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
   }
 
-  .thundr-h1 {
+  .product-h1 {
     font-size: clamp(2.4rem, 4vw, 4.5rem);
     font-weight: 400;
     margin: 0;
@@ -727,7 +780,7 @@
     color: #fff;
   }
 
-  .thundr-desc {
+  .product-desc {
     font-size: 1rem;
     line-height: 1.75;
     color: rgba(255, 255, 255, 0.7);
@@ -735,7 +788,7 @@
     max-width: 52ch;
   }
 
-  .thundr-stats {
+  .product-stats {
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -768,7 +821,7 @@
     background: #facc15;
   }
 
-  .thundr-phone {
+  .product-phone {
     height: 680px;
     width: auto;
     flex-shrink: 0;
@@ -776,25 +829,25 @@
   }
 
   @media (max-width: 768px) {
-    .thundr {
+    .product {
       height: auto;
       min-height: 100vh;
       padding: 5rem 0 3rem;
     }
 
-    .thundr-inner {
+    .product-inner {
       flex-direction: column-reverse;
       gap: 2rem;
       padding: 0 1.5rem;
     }
 
-    .thundr-phone {
+    .product-phone {
       height: auto;
       width: 80%;
       max-width: 320px;
     }
 
-    .thundr-text {
+    .product-text {
       width: 100%;
     }
   }
@@ -852,9 +905,77 @@
   }
 
   .hex-btn--sm {
-    width: 25%;
-    
-    
+    width: auto;
+    padding: 1.5rem 2rem;
+  }
+
+  .products-dropdown {
+    position: relative;
+    display: inline-flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .dropdown-arrow {
+    margin-left: 0.4rem;
+    display: inline-block;
+    transition: transform 0.2s ease;
+  }
+
+  .dropdown-arrow.open {
+    transform: rotate(180deg);
+  }
+
+  .products-list {
+    list-style: none;
+    margin: 0.5rem 0 0;
+    padding: 0.5rem 0;
+    background: #0d1f4a;
+    border: 1.5px solid #1a358c;
+    border-radius: 8px;
+    min-width: 180px;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    z-index: 10;
+  }
+
+  .products-list li {
+    padding: 0.65rem 1.25rem;
+    font-size: 0.95rem;
+    color: #fff;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: background 0.15s, color 0.15s;
+  }
+
+  .products-list li:hover {
+    background: rgba(250, 204, 21, 0.1);
+    color: #facc15;
+  }
+
+  .coming-soon {
+    color: rgba(255, 255, 255, 0.45) !important;
+    cursor: default !important;
+  }
+
+  .coming-soon:hover {
+    background: transparent !important;
+    color: rgba(255, 255, 255, 0.45) !important;
+  }
+
+  .badge {
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #facc15;
+    background: rgba(250, 204, 21, 0.15);
+    border: 1px solid rgba(250, 204, 21, 0.4);
+    border-radius: 4px;
+    padding: 0.1rem 0.35rem;
   }
 
   .hex-btn--social {
@@ -864,7 +985,7 @@
     margin-top: 0;
   }
 
-  .footer-section {
+  .site-footer {
     height: auto;
     min-height: 100vh;
     align-items: flex-start;
