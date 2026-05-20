@@ -5,6 +5,32 @@ Screenshots: `products-page-top.png`, `products-page-bottom.png`
 
 ---
 
+## Reusability Notes (from src audit)
+
+### Directly reusable components
+| Component | File | Usage |
+|-----------|------|-------|
+| `<Nav>` | `src/components/Nav.svelte` | Pass `currentPage="products"` for active highlight |
+| `<Footer>` | `src/components/Footer.svelte` | Static, no props needed |
+| `<HexButton variant="solid">` | `src/components/HexButton.svelte` | Use for "Visit Thundr" CTA |
+| `<AboutCTA>` | `src/sections/about/AboutCTA.svelte` | "Want to collaborate?" band — matches live site exactly |
+
+### Shared CSS classes (src/styles/shared.css)
+| Class | Purpose |
+|-------|---------|
+| `.eyebrow` | Yellow uppercase label above headings |
+| `.yellow` | Yellow `#facc15` text span |
+| `.h1-line` | `display: block` for multi-line headlines |
+| `.hex-btn` | Solid yellow hex button |
+| `.hex-btn--sm` | Smaller hex variant |
+| `.hex-ghost-wrap` + `.hex-ghost-btn` | Ghost hex (dark fill, yellow border) |
+
+### Section base styles (src/index.css)
+- `section.black` — `background: #030d22`, full-viewport, flex column centered
+- `section.blue` — `background: #001f7f`, used for footer
+
+---
+
 ## Global
 
 - **Font:** `"Exo 2", sans-serif` (all elements)
