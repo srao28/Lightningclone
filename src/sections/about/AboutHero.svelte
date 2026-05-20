@@ -11,9 +11,12 @@
   .hero-outer {
     width: 100%;
     background: #000a28;
-    padding: 1rem 20px 0;
+    padding: 1rem 20px 2rem;
     margin-top: 5rem;
-    align-self: flex-start;
+    height: auto;
+    min-height: unset;
+    display: block;
+    overflow: visible;
   }
 
   .hero-card {
