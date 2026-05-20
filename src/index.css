@@ -1,8 +1,15 @@
-body {
+html, body {
   margin: 0;
+  padding: 0;
+  width: 100%;
+  overflow-x: hidden;
   font-family: system-ui, sans-serif;
-  background: #0d1b4b;
+  background: #030d22;
   color: #fff;
+}
+
+#app {
+  width: 100%;
 }
 
 * {

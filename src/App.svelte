@@ -1,7 +1,7 @@
 <script>
   import { onMount, onDestroy, tick } from 'svelte';
   import logo from './images/logo.png';
-  import thundrPhone from './images/product-phone.png';
+  import thundrPhone from './images/thundr-phone.png';
   import goldCircle from './images/gold-circle.png';
   import gifVR from './images/virtual-reality.gif';
   import gifLove from './images/love.gif';
@@ -213,7 +213,7 @@
           </div>
 </section>
 
-<section class="black site-footer">
+<section class="blue site-footer">
   <div class="footer-inner">
     <div class="footer-top">
       
@@ -221,23 +221,23 @@
         <img src={logo} alt="Lightningware" class="footer-logo" />
         <p>Driving innovation in social and entertainment technology to create meaningful digital experiences</p>
       </div>
-      <div class="footer-links">
-        <span class="footer-links-heading">Quick Links</span>
-        <ul>
-          <li>Home</li>
-          <li>About Us</li>
-          <li>Products</li>
-          <li>Support</li>
-          
-        </ul>
-      </div>
-      <div class="footer-links">
-        <span class="footer-links-heading">Legal</span>
-        <ul>
-          <li>Privacy Policy</li>
-          <li>Terms of Service</li>
-        
-        </ul>
+      <div class="footer-links-row">
+        <div class="footer-links">
+          <span class="footer-links-heading">Quick Links</span>
+          <ul>
+            <li>Home</li>
+            <li>About Us</li>
+            <li>Products</li>
+            <li>Support</li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <span class="footer-links-heading">Legal</span>
+          <ul>
+            <li>Privacy Policy</li>
+            <li>Terms of Service</li>
+          </ul>
+        </div>
       </div>
     </div>
     <hr class="footer-hr" />
@@ -284,7 +284,7 @@
   }
 
   .nav-logo {
-    height: 72px;
+    height: auto;
     width: auto;
     display: block;
   }
@@ -396,6 +396,7 @@
 
   section {
     height: 100vh;
+    width: 100vw;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -420,6 +421,7 @@
   section.blue {
     background: #001f7f;
     color: #fff;
+    width: 100%;
   }
 
   .content {
@@ -1160,6 +1162,39 @@
     position: fixed;
     inset: 0;
     z-index: 98;
+  }
+
+  @media (max-width: 480px) {
+    .site-footer {
+      padding: 5rem 0 2rem;
+    }
+
+    .footer-inner {
+      padding: 0 1.5rem;
+      gap: 2rem;
+    }
+
+    .footer-top {
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .footer-links-row {
+      display: inline-flex;
+      gap: 3rem;
+    }
+
+    .footer-bottom {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 1.25rem;
+    }
+
+    .footer-socials {
+      display: inline-flex;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+    }
   }
 
   @media (max-width: 425px) {
