@@ -61,10 +61,10 @@
 
   .nav-wrapper {
     position: fixed;
-    top: 0;
+    top: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
+    width: 85%;
     z-index: 100;
     height: 5rem;
     pointer-events: none;
