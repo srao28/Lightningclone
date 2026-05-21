@@ -67,7 +67,7 @@
     height: min(70vh, 40vw);
     position: relative;
     margin-left: auto;
-    margin-right: 2vw;
+    margin-right: 18vw;
     margin-top: -1vh;
   }
 
