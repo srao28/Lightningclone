@@ -48,10 +48,11 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 6rem 6rem 0;
-    gap: 2rem;
+    justify-content: flex-start;
+    padding: 0 0 0 6rem;
+    gap: 0;
     width: 100%;
+    overflow: hidden;
   }
 
   .landing-inner {
@@ -62,10 +63,11 @@
 
   .vanta-globe {
     flex: 0 0 auto;
-    width: min(88vh, 62vw);
-    height: min(88vh, 62vw);
+    width: min(100vh, 68vw);
+    height: min(100vh, 68vw);
     position: relative;
-    overflow: hidden;
+    margin-left: auto;
+    margin-right: -8vw;
   }
 
   .content {
@@ -78,14 +80,14 @@
   .landing .content {
     text-align: left;
     align-items: flex-start;
-    max-width: 540px;
+    max-width: 520px;
   }
 
   .landing h1 {
-    font-size: clamp(2.4rem, 3.5vw, 4rem);
-    font-weight: 300;
+    font-size: clamp(3rem, 4.5vw, 5.5rem);
+    font-weight: 700;
     margin: 0 0 1.25rem;
-    line-height: 1.15;
+    line-height: 1.1;
     letter-spacing: -0.02em;
   }
 
