@@ -12,3 +12,6 @@ dist
 # Dev screenshots
 *.png
 
+# Session histories
+session-histories/
+

@@ -32,7 +32,7 @@
       <button class:active={currentPage === 'home'} on:click={() => navigate('home')}>Home</button>
       <button class:active={currentPage === 'about'} on:click={() => navigate('about')}>About Us</button>
       <button class:active={currentPage === 'products'} on:click={() => navigate('products')}>Products</button>
-      <button>Support</button>
+      <button class:active={currentPage === 'support'} on:click={() => navigate('support')}>Support</button>
     </div>
     <div class="nav-right">
       <HexButton variant="nav" on:click={() => window.location.href = 'mailto:support@thundr.com'}>Contact Us</HexButton>
@@ -52,7 +52,7 @@
   <button on:click={() => navigate('home')}>Home</button>
   <button on:click={() => navigate('about')}>About Us</button>
   <button on:click={() => navigate('products')}>Product</button>
-  <button on:click={closeMenu}>Support</button>
+  <button on:click={() => navigate('support')}>Support</button>
   <button on:click={() => { closeMenu(); window.location.href = 'mailto:support@thundr.com'; }}>Contact Us</button>
 </div>
 
@@ -79,7 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5rem;
+    padding: 0 1.5rem;
     background: #001f7f;
     pointer-events: all;
     clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 50%, calc(100% - 20px) 100%, 20px 100%, 0% 50%);
@@ -118,9 +118,9 @@
     background: transparent;
     border: none;
     color: #fcfcfc;
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 500;
-    padding: 0.55rem 1.4rem;
+    padding: 0.55rem 1.75rem;
     cursor: pointer;
     letter-spacing: 0.03em;
     white-space: nowrap;

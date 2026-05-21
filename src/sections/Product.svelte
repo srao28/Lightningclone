@@ -1,6 +1,8 @@
 <script>
   import thundrPhone from '../images/thundr-phone.png';
 
+  export let description = "Thundr is a revolutionary social platform that allows users to meet and talk to new people worldwide. With AI-powered moderation and a seamless user experience, Thundr makes conversations effortless, safe, and engaging.";
+
   let productsOpen = false;
 
   function toggleProducts() {
@@ -14,22 +16,22 @@
     <div class="product-text">
       <span class="eyebrow">Thundr</span>
       <h1 class="product-h1"><span class="h1-line">A human search engine</span><span class="h1-line">for real <span class="yellow">connections.</span></span></h1>
-      <p class="product-desc">Thundr is a revolutionary social platform that allows users to meet and talk to new people worldwide. With AI-powered moderation and a seamless user experience, Thundr makes conversations effortless, safe, and engaging.</p>
+      <p class="product-desc">{description}</p>
 
       <div class="product-stats">
         <div class="stat">
           <span class="stat-num">8 M+</span>
-          <span class="stat-label">Monthly Visits</span>
+          <span class="stat-label">Monthly visits</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
           <span class="stat-num">81 k+</span>
-          <span class="stat-label">Daily Visits</span>
+          <span class="stat-label">Daily visits</span>
         </div>
       </div>
       <div class="products-dropdown">
         <button class="hex-btn hex-btn--sm" on:click={toggleProducts}>
-          Our Products <span class="dropdown-arrow" class:open={productsOpen}>▾</span>
+          Visit Thundr <span class="dropdown-arrow" class:open={productsOpen}>▾</span>
         </button>
         {#if productsOpen}
           <ul class="products-list">
@@ -51,14 +53,17 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: auto;
+    min-height: auto;
+    overflow: visible;
   }
 
   .product-inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
-    max-width: 1100px;
-    padding: 0 2rem;
+    padding: 0 4rem;
   }
 
   .product-text {
@@ -86,7 +91,7 @@
     line-height: 1.75;
     color: rgba(255, 255, 255, 0.7);
     margin: 0;
-    max-width: 52ch;
+    max-width: 68ch;
   }
 
   .product-stats {
@@ -111,8 +116,7 @@
 
   .stat-label {
     font-size: 1rem;
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
+    letter-spacing: 0.03em;
     color: rgba(255, 255, 255, 0.5);
   }
 

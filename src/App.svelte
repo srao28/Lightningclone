@@ -3,6 +3,8 @@
   import Footer from './components/Footer.svelte';
   import Home from './pages/Home.svelte';
   import AboutUs from './pages/AboutUs.svelte';
+  import Products from './pages/Products.svelte';
+  import Support from './pages/Support.svelte';
 
   let landingRef;
   let currentPage = 'home';
@@ -20,6 +22,10 @@
   <Home bind:landingRef />
 {:else if currentPage === 'about'}
   <AboutUs on:navigate={(e) => navigate(e.detail)} />
+{:else if currentPage === 'products'}
+  <Products />
+{:else if currentPage === 'support'}
+  <Support />
 {/if}
 
 <Footer />
