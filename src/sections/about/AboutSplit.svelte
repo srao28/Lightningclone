@@ -23,14 +23,14 @@
     display: flex;
     align-items: center;
     gap: 0rem;
-    padding: 4rem 4rem;
+    padding: 1rem 1rem;
     overflow: visible;
     position: relative;
     z-index: 1;
   }
 
   .about-img {
-    width: 750px;
+    width: 50vw;
     height: 800px;
     flex-shrink: 0;
     object-fit: contain;
@@ -40,8 +40,10 @@
   .about-text {
     display: flex;
     flex-direction: column;
+    align-items: flex-start;
+    align-self: flex-start;
     gap: 1rem;
-    max-width: 850px;
+    width: 50vw;
   }
 
 
@@ -66,7 +68,7 @@
     font-size: 0.85rem;
     font-weight: 400;
     letter-spacing: 0.15em;
-    text-transform: uppercase;
+    
   }
 
   @media (max-width: 430px) {
