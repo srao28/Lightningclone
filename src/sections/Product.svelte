@@ -31,7 +31,7 @@
       </div>
       <div class="products-dropdown">
         <button class="hex-btn hex-btn--sm" on:click={toggleProducts}>
-          Our Products <span class="dropdown-arrow" class:open={productsOpen}>▾</span>
+          Visit Thundr <span class="dropdown-arrow" class:open={productsOpen}>▾</span>
         </button>
         {#if productsOpen}
           <ul class="products-list">
