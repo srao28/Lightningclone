@@ -91,7 +91,7 @@
     line-height: 1.75;
     color: rgba(255, 255, 255, 0.7);
     margin: 0;
-    max-width: 52ch;
+    max-width: 68ch;
   }
 
   .product-stats {
