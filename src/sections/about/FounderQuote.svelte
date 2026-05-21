@@ -10,9 +10,11 @@
   .quote-outer {
     width: 100%;
     background: #000a28;
-    padding: 3rem 0 4rem;
+    padding: 0px 0px 0px;
+    
     display: flex;
     justify-content: center;
+    height: 40vh;
   }
 
   .quote-card {

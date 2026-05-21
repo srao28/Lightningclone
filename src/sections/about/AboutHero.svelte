@@ -20,7 +20,7 @@
   }
 
   .hero-card {
-    width: 85%;
+    width: 100%;
     background: #001f7f;
     border-radius: 16px;
     display: flex;
