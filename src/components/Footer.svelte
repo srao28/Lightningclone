@@ -9,23 +9,21 @@
         <img src={logo} alt="Lightningware" class="footer-logo" />
         <p>Driving innovation in social and entertainment technology to create meaningful digital experiences</p>
       </div>
-      <div class="footer-links-row">
-        <div class="footer-links">
-          <span class="footer-links-heading">Quick Links</span>
-          <ul>
-            <li>Home</li>
-            <li>About Us</li>
-            <li>Products</li>
-            <li>Support</li>
-          </ul>
-        </div>
-        <div class="footer-links">
-          <span class="footer-links-heading">Legal</span>
-          <ul>
-            <li>Privacy Policy</li>
-            <li>Terms of Service</li>
-          </ul>
-        </div>
+      <div class="footer-links">
+        <span class="footer-links-heading">Quick Links</span>
+        <ul>
+          <li>Home</li>
+          <li>About Us</li>
+          <li>Products</li>
+          <li>Support</li>
+        </ul>
+      </div>
+      <div class="footer-links">
+        <span class="footer-links-heading">Legal</span>
+        <ul>
+          <li>Privacy Policy</li>
+          <li>Terms of Service</li>
+        </ul>
       </div>
     </div>
     <hr class="footer-hr" />
@@ -99,7 +97,7 @@
     font-weight: 700;
     letter-spacing: 0.15em;
     text-transform: uppercase;
-    color: #facc15;
+    color: #ffc100;
   }
 
   .footer-links ul {
