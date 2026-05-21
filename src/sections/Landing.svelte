@@ -156,8 +156,8 @@
     }
 
     .vanta-globe {
-      width: min(70vw, 70vw);
-      height: min(70vw, 70vw);
+      width: min(80vw, 80vw);
+      height: min(80vw, 80vw);
       flex-shrink: 0;
     }
 
