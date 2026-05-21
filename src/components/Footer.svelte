@@ -103,11 +103,11 @@
   }
 
   .footer-links-heading {
-    font-size: 0.75rem;
-    font-weight: 700;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #ffc100;
+    font-size: 1.5rem;
+    font-weight: 400;
+    letter-spacing: 0;
+    text-transform: none;
+    color: #fff;
   }
 
   .footer-links ul {
