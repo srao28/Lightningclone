@@ -99,7 +99,7 @@
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.65);
     margin: 0;
-    max-width: 480px;
+    max-width: 650px;
   }
 
   .social-proof {
