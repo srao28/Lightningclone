@@ -21,6 +21,8 @@
   <Home bind:landingRef />
 {:else if currentPage === 'about'}
   <AboutUs on:navigate={(e) => navigate(e.detail)} />
+{:else if currentPage === 'products'}
+  <Products />
 {/if}
 
 <Footer />
