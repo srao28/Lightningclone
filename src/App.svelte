@@ -3,6 +3,7 @@
   import Footer from './components/Footer.svelte';
   import Home from './pages/Home.svelte';
   import AboutUs from './pages/AboutUs.svelte';
+  import Products from './pages/Products.svelte';
 
   let landingRef;
   let currentPage = 'home';
