@@ -51,6 +51,7 @@
     overflow: visible;
     height: auto;
     min-height: 140vh;
+    padding: 5rem 2rem;
   }
 
   .roadmap-content {
@@ -83,7 +84,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -16rem
+    margin-top: -10rem
     
   }
 
@@ -94,7 +95,7 @@
     display: flex;
     justify-content: center;
     align-items: flex-start;
-    gap: 8rem;
+    gap: 18rem;
   }
 
   .gif-images {
@@ -107,8 +108,8 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    max-width: 590px;
-    padding: 0 2rem;
+    max-width: 750px;
+    padding: 5rem 5rem;
   }
 
   .roadmap-text p {
@@ -132,12 +133,17 @@
   }
 
   .roadmap-cta p {
-    font-size: 36px;
+    font-size: 5rem;
     font-weight: 300;
     line-height: 1.35;
     color: #fff;
     margin: 0;
     letter-spacing: -0.03em;
+  }
+
+  .roadmap-cta :global(.hex-btn) {
+    font-size: 3rem;
+    padding: 2rem 3rem;
   }
 
   @media (max-width: 430px) {
