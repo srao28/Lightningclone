@@ -56,16 +56,15 @@
   }
 
   .landing-inner {
-    flex: 1 1 0;
+    flex: 0 0 auto;
     min-width: 0;
     z-index: 2;
   }
 
   .vanta-globe {
-    flex: 0 0 42%;
-    width: 42%;
-    height: min(80vh, 42%);
-    aspect-ratio: 1;
+    flex: 0 0 auto;
+    width: min(75vh, 48%);
+    height: min(75vh, 48%);
     position: relative;
   }
 
@@ -79,11 +78,11 @@
   .landing .content {
     text-align: left;
     align-items: flex-start;
-    max-width: 600px;
+    max-width: 500px;
   }
 
   .landing h1 {
-    font-size: clamp(4rem, 5vw, 6rem);
+    font-size: clamp(2.5rem, 3.5vw, 4.5rem);
     font-weight: 350;
     margin: 0 0 1.25rem;
     line-height: 1.1;
