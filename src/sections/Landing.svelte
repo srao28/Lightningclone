@@ -22,7 +22,7 @@
   <div class="globesec">
     <div class="landing-inner">
       <div class="content">
-        <h1><span class="h1-line">Innovating the <span class="yellow">Future</span></span><span class="h1-line">of Social Technology</span></h1>
+        <h1><span class="h1-line">Innovating the</span><span class="h1-line"><span class="yellow">Future</span></span><span class="h1-line">of Social Technology</span></h1>
         <p>Lightningware is a next-generation software publisher creating social technology that redefines how people connect. We develop groundbreaking applications, designed to spark real conversations and foster meaningful interactions.</p>
         <div class="hex-ghost-wrap">
           <button class="hex-ghost-btn">Contact Us</button>
