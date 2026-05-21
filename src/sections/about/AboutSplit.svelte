@@ -5,7 +5,7 @@
 <section class="about-split">
   <img src={aboutMockup} alt="Lightningware app on phone" class="about-img" />
   <div class="about-text">
-    <p class="eyebrow-yellow">What we do</p>
+    <p class="eyebrow">What we do</p>
     <h2>About <span class="yellow">Lightningware</span></h2>
     <p>We're not an agency. We don't build software for clients. We create and launch our own products, shaping the future of digital interactions.</p>
     <p>With a commitment to innovation, we develop proprietary technologies, file patents, and push the boundaries of what's possible.</p>
@@ -22,7 +22,7 @@
     background: #030d22;
     display: flex;
     align-items: center;
-    gap: 2rem;
+    gap: 0rem;
     padding: 4rem 4rem;
     overflow: visible;
     position: relative;
@@ -30,8 +30,8 @@
   }
 
   .about-img {
-    width: 650px;
-    height: 700px;
+    width: 750px;
+    height: 800px;
     flex-shrink: 0;
     object-fit: contain;
     object-position: center;
@@ -40,16 +40,16 @@
   .about-text {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    max-width: 520px;
+    gap: 1rem;
+    max-width: 850px;
   }
 
   .eyebrow-yellow {
     font-size: 0.85rem;
     font-weight: 400;
     letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #facc15;
+  
+    color: #fcc150;
     margin: 0;
   }
 
