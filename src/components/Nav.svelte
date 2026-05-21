@@ -118,9 +118,9 @@
     background: transparent;
     border: none;
     color: #fcfcfc;
-    font-size: 0.85rem;
+    font-size: 1rem;
     font-weight: 500;
-    padding: 0.55rem 1.4rem;
+    padding: 0.55rem 1.75rem;
     cursor: pointer;
     letter-spacing: 0.03em;
     white-space: nowrap;
