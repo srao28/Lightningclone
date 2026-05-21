@@ -25,7 +25,7 @@
   }
 
   .support-heading {
-    font-size: clamp(4rem, 5vw, 5rem);
+    font-size: clamp(3rem, 4vw, 4rem);
     font-weight: 300;
     color: #fff;
     margin: 0;
