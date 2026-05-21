@@ -29,9 +29,9 @@
     background: #facc15;
     color: #000;
     border: none;
-    font-size: 0.9rem;
+    font-size: 1.1rem;
     font-weight: 700;
-    padding: 0.65rem 1.8rem;
+    padding: 0.85rem 2.2rem;
     border-radius: 0;
     cursor: pointer;
     letter-spacing: 0.04em;
