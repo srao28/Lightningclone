@@ -14,7 +14,7 @@
     <div class="product-text">
       <span class="eyebrow">Thundr</span>
       <h1 class="product-h1"><span class="h1-line">A human search engine</span><span class="h1-line">for real <span class="yellow">connections.</span></span></h1>
-      <p class="product-desc">Thundr is a revolutionary social platform that allows users to meet and talk to new people worldwide. With AI-powered moderation and a seamless user experience, Thundr makes conversations effortless, safe, and engaging.</p>
+      <p class="product-desc">Thundr is an app that lets you meet and talk to new people from anywhere in the world. You can think of it as a "human search engine": you pick the interests you care about, and Thundr will connect you with someone who likes those same things. It's designed for adults and can be used for making friends, finding someone special, or just having an interesting conversation. To help keep everything safe, Thundr uses artificial intelligence to moderate the platform. This AI looks out for any behavior that might be harmful or inappropriate, so you can feel more comfortable meeting new people. The goal is to offer a welcoming environment where you can talk freely without worrying about who's on the other side. Thundr is simple to use, no matter how tech-savvy you are. All you need to do is log in, pick some interests, and let Thundr find your chat partner. Whether you're there to make friends, search for a specific kind of person, or simply talk about the things you love, Thundr makes it easy to connect.</p>
 
       <div class="product-stats">
         <div class="stat">
