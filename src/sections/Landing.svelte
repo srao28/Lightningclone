@@ -49,23 +49,23 @@
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    padding: 0 4rem 0 6rem;
+    padding: 0 3rem 0 5rem;
     gap: 2rem;
     width: 100%;
     overflow: hidden;
   }
 
   .landing-inner {
-    flex: 0 0 auto;
+    flex: 1 1 0;
     min-width: 0;
     z-index: 2;
   }
 
   .vanta-globe {
-    flex: 1 1 0;
-    min-width: 0;
+    flex: 0 0 42%;
+    width: 42%;
+    height: min(80vh, 42%);
     aspect-ratio: 1;
-    max-height: 90%;
     position: relative;
   }
 
@@ -79,7 +79,7 @@
   .landing .content {
     text-align: left;
     align-items: flex-start;
-    width: 750px;
+    max-width: 600px;
   }
 
   .landing h1 {
