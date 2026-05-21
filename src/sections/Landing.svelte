@@ -78,7 +78,7 @@
   .landing .content {
     text-align: left;
     align-items: flex-start;
-    max-width: 650px;
+    max-width: 750px;
   }
 
   .landing h1 {
