@@ -52,21 +52,20 @@
     padding: 0 4rem 0 5rem;
     gap: 3rem;
     width: 100%;
+    height: 100%;
     overflow: hidden;
   }
 
   .landing-inner {
-    flex: 1 1 auto;
+    flex: 0 0 auto;
     min-width: 0;
     z-index: 2;
   }
 
   .vanta-globe {
-    flex: 0 0 auto;
+    flex: 0 0 55vh;
     width: 55vh;
     height: 55vh;
-    position: relative;
-    align-self: center;
   }
 
   .content {
