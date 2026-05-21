@@ -114,25 +114,16 @@
   }
 
   .avatar {
-    width: 36px;
-    height: 36px;
+    width: 40px;
+    height: 40px;
     border-radius: 50%;
     border: 2px solid #030d22;
-    background: linear-gradient(135deg, #4a5568, #718096);
-    margin-left: -10px;
+    margin-left: -12px;
+    object-fit: cover;
   }
 
   .avatar:first-child {
     margin-left: 0;
-    background: linear-gradient(135deg, #6b7280, #9ca3af);
-  }
-
-  .avatar:nth-child(2) {
-    background: linear-gradient(135deg, #d4a574, #c49060);
-  }
-
-  .avatar:nth-child(3) {
-    background: linear-gradient(135deg, #374151, #4b5563);
   }
 
   .social-label {
