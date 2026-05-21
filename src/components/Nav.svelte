@@ -64,7 +64,7 @@
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 85%;
+    width: 97.5vw;
     z-index: 100;
     height: 5rem;
     pointer-events: none;
@@ -79,6 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: visible;
     padding: 0 1.5rem;
     background: #001f7f;
     pointer-events: all;
@@ -92,9 +93,10 @@
   }
 
   .nav-logo {
-    height: 80px;
+    height: 6rem;
     width: auto;
     display: block;
+    overflow: visible;
   }
 
   .nav-center {
@@ -128,12 +130,12 @@
 
   .nav-center button:hover {
     background: transparent;
-    color: #facc15;
+    color: #ffc100;
     text-decoration: underline;
   }
 
   .nav-center button.active {
-    color: #facc15;
+    color: #ffc100;
     text-decoration: underline;
   }
 
@@ -196,7 +198,7 @@
   }
 
   .mobile-menu button:hover {
-    color: #facc15;
+    color: #ffc100;
     text-decoration: underline;
   }
 
