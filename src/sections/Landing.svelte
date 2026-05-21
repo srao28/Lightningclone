@@ -48,9 +48,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 4rem 0 5rem;
-    gap: 3rem;
+    justify-content: flex-start;
+    padding: 0 0 0 5rem;
+    gap: 4rem;
     width: 100%;
     height: 100%;
     overflow: hidden;
@@ -63,7 +63,7 @@
   }
 
   .vanta-globe {
-    flex: 0 0 55vh;
+    flex: 0 0 auto;
     width: 55vh;
     height: 55vh;
   }
