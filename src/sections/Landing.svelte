@@ -82,7 +82,7 @@
   }
 
   .landing h1 {
-    font-size: clamp(3rem, 4vw, 5rem);
+    font-size: clamp(3.5rem, 5vw, 6rem);
     font-weight: 350;
     margin: 0 0 1.25rem;
     line-height: 1.1;
