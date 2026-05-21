@@ -63,11 +63,12 @@
 
   .vanta-globe {
     flex: 0 0 auto;
-    width: min(80vh, 46vw);
-    height: min(80vh, 46vw);
+    width: min(70vh, 40vw);
+    height: min(70vh, 40vw);
     position: relative;
     margin-left: auto;
-    margin-right: -6vw;
+    margin-right: 2vw;
+    margin-top: -1vh;
   }
 
   .content {
@@ -80,12 +81,12 @@
   .landing .content {
     text-align: left;
     align-items: flex-start;
-    max-width: 680px;
+    width: 750px;
   }
 
   .landing h1 {
-    font-size: clamp(3rem, 4vw, 6rem);
-    font-weight: 400;
+    font-size: clamp(4rem, 5vw, 6rem);
+    font-weight: 350;
     margin: 0 0 1.25rem;
     line-height: 1.1;
     letter-spacing: -0.02em;
