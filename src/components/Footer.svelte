@@ -78,7 +78,7 @@
   }
 
   .footer-logo {
-    height: 50px;
+    height: 90px;
     width: auto;
     margin-bottom: 1rem;
   }
