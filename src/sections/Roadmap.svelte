@@ -83,7 +83,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: -6rem
+    margin-top: -16rem
+    
   }
 
   .roadmap-bottom-boxes {
@@ -91,8 +92,9 @@
     z-index: 1;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
+    gap: 8rem;
   }
 
   .gif-images {
