@@ -66,7 +66,7 @@
   .roadmap-circle {
     padding: 4rem 2rem;
     position: absolute;
-    inset: 4;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -78,7 +78,6 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    margin-top: -6rem;
     display: flex;
     justify-content: center;
     align-items: center;
