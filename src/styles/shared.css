@@ -87,6 +87,11 @@
   transition: background 0.15s, transform 0.15s;
   white-space: nowrap;
   margin-top: 0.5rem;
+  outline: none;
+}
+
+.hex-btn:focus {
+  outline: none;
 }
 
 .hex-btn:hover {
