@@ -21,7 +21,7 @@
     min-height: unset;
     background: #030d22;
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 0rem;
     padding: 1rem 1rem;
     overflow: visible;
