@@ -29,9 +29,9 @@
         </div>
         <div class="social-proof">
           <div class="avatars">
-            <div class="avatar"></div>
-            <div class="avatar"></div>
-            <div class="avatar"></div>
+            <img class="avatar" src="/src/images/hunter-dm-1.jpg" alt="user" />
+            <img class="avatar" src="/src/images/woman.jpg" alt="user" />
+            <img class="avatar" src="/src/images/image-from-slack.jpg" alt="user" />
           </div>
           <span class="social-label">8M+ Monthly Users</span>
         </div>
