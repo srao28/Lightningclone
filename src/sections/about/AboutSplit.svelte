@@ -61,6 +61,14 @@
     margin: 0;
   }
 
+  .about-text .eyebrow {
+    color: #facc15;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
   @media (max-width: 430px) {
     .about-split {
       flex-direction: column;
