@@ -52,8 +52,8 @@
     display: flex;
     justify-content: space-evenly;
     align-items: flex-start;
-    padding: 0 2rem 4rem;
-    margin-top: -100px;
+    padding: 0 2rem 2rem;
+    margin-top: -60px;
     position: relative;
     z-index: 3;
   }
