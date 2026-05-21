@@ -33,7 +33,7 @@
   }
 
   .support-email {
-    font-size: clamp(1.2rem, 2vw, 1.75rem);
+    font-size: clamp(3.2rem, 4vw, 3.75rem);
     font-weight: 300;
     color: #fff;
     margin: 0;
