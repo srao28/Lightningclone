@@ -93,10 +93,12 @@
   }
 
   .nav-logo {
-    height: 6rem;
+    height: 8rem;
     width: auto;
     display: block;
     overflow: visible;
+    position: relative;
+    margin-top: 1.5rem;
   }
 
   .nav-center {
