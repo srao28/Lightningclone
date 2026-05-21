@@ -22,10 +22,18 @@
   <div class="globesec">
     <div class="landing-inner">
       <div class="content">
-        <h1><span class="h1-line">Innovating the</span><span class="h1-line"><span class="yellow">Future</span></span><span class="h1-line">of Social Technology</span></h1>
+        <h1><span class="h1-line">Innovating the <span class="yellow">Future</span></span><span class="h1-line">of Social Technology</span></h1>
         <p>Lightningware is a next-generation software publisher creating social technology that redefines how people connect. We develop groundbreaking applications, designed to spark real conversations and foster meaningful interactions.</p>
         <div class="hex-ghost-wrap">
           <button class="hex-ghost-btn">Contact Us</button>
+        </div>
+        <div class="social-proof">
+          <div class="avatars">
+            <img class="avatar" src="/src/images/hunter-dm-1.jpg" alt="user" />
+            <img class="avatar" src="/src/images/woman.jpg" alt="user" />
+            <img class="avatar" src="/src/images/image-from-slack.jpg" alt="user" />
+          </div>
+          <span class="social-label">8M+ Monthly Users</span>
         </div>
       </div>
     </div>
@@ -40,10 +48,12 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 6rem 4rem 0;
-    gap: 2rem;
+    justify-content: flex-start;
+    padding: 0 0 0 8rem;
+    gap: 4rem;
     width: 100%;
+    height: 100%;
+    overflow: hidden;
   }
 
   .landing-inner {
@@ -53,12 +63,9 @@
   }
 
   .vanta-globe {
-    flex: 1;
-    min-width: 0;
-    width: min(80vh, 55vw);
-    height: min(80vh, 55vw);
-    position: relative;
-    overflow: hidden;
+    flex: 0 0 auto;
+    width: 55vh;
+    height: 55vh;
   }
 
   .content {
@@ -71,14 +78,14 @@
   .landing .content {
     text-align: left;
     align-items: flex-start;
-    max-width: 420px;
+    max-width: 900px;
   }
 
   .landing h1 {
-    font-size: clamp(2rem, 2.8vw, 3.2rem);
-    font-weight: 300;
+    font-size: clamp(3.5rem, 5vw, 6rem);
+    font-weight: 350;
     margin: 0 0 1.25rem;
-    line-height: 1.2;
+    line-height: 1.1;
     letter-spacing: -0.02em;
   }
 
@@ -92,6 +99,37 @@
     line-height: 1.7;
     color: rgba(255, 255, 255, 0.65);
     margin: 0;
+    max-width: 650px;
+  }
+
+  .social-proof {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    margin-top: 1.5rem;
+  }
+
+  .avatars {
+    display: flex;
+  }
+
+  .avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid #030d22;
+    margin-left: -12px;
+    object-fit: cover;
+  }
+
+  .avatar:first-child {
+    margin-left: 0;
+  }
+
+  .social-label {
+    font-size: 0.95rem;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 400;
   }
 
   @media (max-width: 768px) {
@@ -109,8 +147,8 @@
     }
 
     .vanta-globe {
-      width: min(70vw, 70vw);
-      height: min(70vw, 70vw);
+      width: min(80vw, 80vw);
+      height: min(80vw, 80vw);
       flex-shrink: 0;
     }
 

@@ -50,7 +50,8 @@
     position: relative;
     overflow: visible;
     height: auto;
-    min-height: 100vh;
+    min-height: 140vh;
+    padding: 5rem 2rem;
   }
 
   .roadmap-content {
@@ -61,12 +62,14 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
+    padding: 6rem 0 4rem;
+    min-height: 120vh;
   }
 
   .roadmap-circle {
     padding: 4rem 2rem;
     position: absolute;
-    inset: 4;
+    inset: 0;
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -78,10 +81,11 @@
     position: relative;
     z-index: 1;
     width: 100%;
-    margin-top: -6rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -10rem
+    
   }
 
   .roadmap-bottom-boxes {
@@ -89,8 +93,9 @@
     z-index: 1;
     width: 100%;
     display: flex;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: flex-start;
+    gap: 18rem;
   }
 
   .gif-images {
@@ -103,8 +108,8 @@
     position: relative;
     z-index: 1;
     text-align: center;
-    max-width: 590px;
-    padding: 0 2rem;
+    max-width: 750px;
+    padding: 5rem 5rem;
   }
 
   .roadmap-text p {
@@ -128,12 +133,17 @@
   }
 
   .roadmap-cta p {
-    font-size: 36px;
+    font-size: 5rem;
     font-weight: 300;
     line-height: 1.35;
     color: #fff;
     margin: 0;
     letter-spacing: -0.03em;
+  }
+
+  .roadmap-cta :global(.hex-btn) {
+    font-size: 3rem;
+    padding: 2rem 3rem;
   }
 
   @media (max-width: 430px) {

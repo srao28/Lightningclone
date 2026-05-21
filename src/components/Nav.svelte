@@ -24,10 +24,9 @@
 </script>
 
 <div class="nav-wrapper">
+  <img src={logo} alt="Lightningware" class="nav-logo" />
   <nav>
-    <div class="nav-left">
-      <img src={logo} alt="Lightningware" class="nav-logo" />
-    </div>
+    <div class="nav-left"></div>
     <div class="nav-center">
       <button class:active={currentPage === 'home'} on:click={() => navigate('home')}>Home</button>
       <button class:active={currentPage === 'about'} on:click={() => navigate('about')}>About Us</button>
@@ -64,7 +63,7 @@
     top: 1rem;
     left: 50%;
     transform: translateX(-50%);
-    width: 85%;
+    width: 97.5vw;
     z-index: 100;
     height: 5rem;
     pointer-events: none;
@@ -79,6 +78,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    overflow: visible;
     padding: 0 1.5rem;
     background: #001f7f;
     pointer-events: all;
@@ -92,9 +92,14 @@
   }
 
   .nav-logo {
-    height: 80px;
+    height: 8rem;
     width: auto;
     display: block;
+    position: absolute;
+    top: -1rem;
+    left: 1.5rem;
+    z-index: 101;
+    pointer-events: all;
   }
 
   .nav-center {
@@ -128,12 +133,12 @@
 
   .nav-center button:hover {
     background: transparent;
-    color: #facc15;
+    color: #ffc100;
     text-decoration: underline;
   }
 
   .nav-center button.active {
-    color: #facc15;
+    color: #ffc100;
     text-decoration: underline;
   }
 
@@ -196,7 +201,7 @@
   }
 
   .mobile-menu button:hover {
-    color: #facc15;
+    color: #ffc100;
     text-decoration: underline;
   }
 

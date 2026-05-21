@@ -15,6 +15,9 @@
     justify-content: center;
     align-items: center;
     height: 70vh;
+    width: 100%;
+    padding: 2rem 0rem;
+    margin-bottom: 4rem;
   }
 
   .mission-content {
