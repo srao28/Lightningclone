@@ -52,7 +52,7 @@
   <button on:click={() => navigate('home')}>Home</button>
   <button on:click={() => navigate('about')}>About Us</button>
   <button on:click={() => navigate('products')}>Product</button>
-  <button on:click={closeMenu}>Support</button>
+  <button on:click={() => navigate('support')}>Support</button>
   <button on:click={() => { closeMenu(); window.location.href = 'mailto:support@thundr.com'; }}>Contact Us</button>
 </div>
 
