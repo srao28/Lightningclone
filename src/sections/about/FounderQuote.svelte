@@ -10,14 +10,16 @@
   .quote-outer {
     width: 100%;
     background: #000a28;
-    padding: 130px 20px 80px;
+    padding: 0px 0px 0px;
+    
     display: flex;
     justify-content: center;
+    height: 40vh;
   }
 
   .quote-card {
     width: 100%;
-    max-width: 1085px;
+    max-width: 95rem;
     background: #ffc100;
     border-radius: 16px;
     padding: 0 20px 40px;

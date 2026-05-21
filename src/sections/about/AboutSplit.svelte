@@ -5,7 +5,7 @@
 <section class="about-split">
   <img src={aboutMockup} alt="Lightningware app on phone" class="about-img" />
   <div class="about-text">
-    <p class="eyebrow-yellow">What we do</p>
+    <p class="eyebrow">What we do</p>
     <h2>About <span class="yellow">Lightningware</span></h2>
     <p>We're not an agency. We don't build software for clients. We create and launch our own products, shaping the future of digital interactions.</p>
     <p>With a commitment to innovation, we develop proprietary technologies, file patents, and push the boundaries of what's possible.</p>
@@ -22,40 +22,35 @@
     background: #030d22;
     display: flex;
     align-items: center;
-    gap: 4rem;
-    padding: 4rem 8rem;
+    gap: 0rem;
+    padding: 1rem 1rem 0;
     overflow: visible;
     position: relative;
     z-index: 1;
   }
 
   .about-img {
-    width: 480px;
-    height: 600px;
+    width: 50vw;
+    height: auto;
+    max-height: 750px;
     flex-shrink: 0;
     object-fit: contain;
-    object-position: bottom;
+    object-position: center;
   }
 
   .about-text {
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
-    max-width: 520px;
+    align-items: flex-start;
+    align-self: center;
+    gap: 1rem;
+    width: 50vw;
   }
 
-  .eyebrow-yellow {
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: #facc15;
-    margin: 0;
-  }
 
   .about-text h2 {
-    font-size: clamp(2rem, 3.5vw, 3.25rem);
-    font-weight: 500;
+    font-size: clamp(4rem, 4.5vw, 6.25rem);
+    font-weight: 400;
     color: #fff;
     margin: 0;
     line-height: 1.15;
@@ -63,10 +58,18 @@
   }
 
   .about-text p {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     line-height: 1.75;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(255, 255, 255);
     margin: 0;
+  }
+
+  .about-text .eyebrow {
+    color: #facc15;
+    font-size: 0.85rem;
+    font-weight: 400;
+    letter-spacing: 0.15em;
+    
   }
 
   @media (max-width: 430px) {

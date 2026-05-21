@@ -9,10 +9,11 @@
   .cta-outer {
     width: 100%;
     background: #000a28;
-    padding: 120px 0;
+    padding: 10rem 5rem;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: 30vh;
   }
 
   .cta-heading {

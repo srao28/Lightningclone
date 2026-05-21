@@ -12,5 +12,6 @@
 <AboutHero />
 <AboutSplit />
 <AboutPillars />
-<AboutCTA />
+
 <FounderQuote />
+<AboutCTA />
