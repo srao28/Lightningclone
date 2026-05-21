@@ -32,7 +32,7 @@
       <button class:active={currentPage === 'home'} on:click={() => navigate('home')}>Home</button>
       <button class:active={currentPage === 'about'} on:click={() => navigate('about')}>About Us</button>
       <button class:active={currentPage === 'products'} on:click={() => navigate('products')}>Products</button>
-      <button>Support</button>
+      <button class:active={currentPage === 'support'} on:click={() => navigate('support')}>Support</button>
     </div>
     <div class="nav-right">
       <HexButton variant="nav" on:click={() => window.location.href = 'mailto:support@thundr.com'}>Contact Us</HexButton>
