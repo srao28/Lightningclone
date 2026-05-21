@@ -62,9 +62,10 @@
   }
 
   .vanta-globe {
-    flex: 0 0 auto;
-    width: min(55vh, 34vw);
-    height: min(55vh, 34vw);
+    flex: 1 1 0;
+    min-width: 0;
+    aspect-ratio: 1;
+    max-height: 90%;
     position: relative;
   }
 
