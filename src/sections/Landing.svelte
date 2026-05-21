@@ -78,11 +78,11 @@
   .landing .content {
     text-align: left;
     align-items: flex-start;
-    max-width: 500px;
+    max-width: 650px;
   }
 
   .landing h1 {
-    font-size: clamp(2.5rem, 3.5vw, 4.5rem);
+    font-size: clamp(3rem, 4vw, 5rem);
     font-weight: 350;
     margin: 0 0 1.25rem;
     line-height: 1.1;
