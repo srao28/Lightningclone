@@ -4,7 +4,7 @@
   import Home from './pages/Home.svelte';
   import AboutUs from './pages/AboutUs.svelte';
   import Products from './pages/Products.svelte';
-  import Support from './pages/Support.svlete';
+  import Support from './pages/Support.svelte';
 
   let landingRef;
   let currentPage = 'home';
