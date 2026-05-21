@@ -193,7 +193,7 @@
     }
 
     .roadmap-cta p {
-      font-size: clamp(1.75rem, 8vw, 3rem);
+      font-size: clamp(1.75rem, 10vw, 3rem);
       text-align: center;
     }
 

@@ -69,7 +69,7 @@
       align-items: center;
       padding: 2rem 1.25rem 3rem;
       gap: 2rem;
-      margin-top: -80px;
+      margin-top: 0;
     }
 
     .box-unit {

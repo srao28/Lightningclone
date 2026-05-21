@@ -92,11 +92,11 @@
   }
 
   .nav-logo {
-    height: 8rem;
+    height: 6rem;
     width: auto;
     display: block;
     position: absolute;
-    top: -1rem;
+    top: -.5rem;
     left: 1.5rem;
     z-index: 101;
     pointer-events: all;

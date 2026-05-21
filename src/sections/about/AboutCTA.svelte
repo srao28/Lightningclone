@@ -9,11 +9,11 @@
   .cta-outer {
     width: 100%;
     background: #000a28;
-    padding: 10rem 5rem;
+    
     display: flex;
     flex-direction: column;
     align-items: center;
-    height: 30vh;
+    height: 40vh;
   }
 
   .cta-heading {
@@ -61,6 +61,21 @@
       font-size: 36px;
       letter-spacing: -1.5px;
       padding: 0 1.5rem;
+    }
+  }
+
+  @media (max-width: 430px) {
+    .cta-outer {
+      height: auto;
+      padding: 3rem 1.25rem;
+      gap: 1.5rem;
+      justify-content: center;
+    }
+
+    .cta-heading {
+      font-size: clamp(1.75rem, 8vw, 2.5rem);
+      letter-spacing: -1px;
+      padding: 0;
     }
   }
 </style>
