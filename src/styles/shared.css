@@ -53,6 +53,19 @@
   gap: 0.5rem;
 }
 
+.text-box--sm {
+  height: auto;
+  min-height: 140px;
+}
+
+.box-unit--sm {
+  width: 280px;
+}
+
+.box-unit--sm .text-box {
+  width: 280px;
+}
+
 .box-title {
   margin-top: 1rem;
   font-size: 20px;
