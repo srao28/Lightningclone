@@ -48,9 +48,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: flex-start;
-    padding: 0 0 0 6rem;
-    gap: 0;
+    justify-content: space-between;
+    padding: 0 4rem 0 6rem;
+    gap: 2rem;
     width: 100%;
     overflow: hidden;
   }
@@ -66,8 +66,6 @@
     width: min(70vh, 40vw);
     height: min(70vh, 40vw);
     position: relative;
-    margin-left: auto;
-    margin-right: 18vw;
     margin-top: -1vh;
   }
 
