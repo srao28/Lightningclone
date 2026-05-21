@@ -22,19 +22,19 @@
     background: #030d22;
     display: flex;
     align-items: center;
-    gap: 4rem;
-    padding: 4rem 8rem;
+    gap: 2rem;
+    padding: 4rem 4rem;
     overflow: visible;
     position: relative;
     z-index: 1;
   }
 
   .about-img {
-    width: 480px;
-    height: 600px;
+    width: 650px;
+    height: 700px;
     flex-shrink: 0;
     object-fit: contain;
-    object-position: bottom;
+    object-position: center;
   }
 
   .about-text {
