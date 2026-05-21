@@ -23,7 +23,7 @@
     display: flex;
     align-items: center;
     gap: 0rem;
-    padding: 1rem 1rem;
+    padding: 1rem 1rem 0;
     overflow: visible;
     position: relative;
     z-index: 1;
