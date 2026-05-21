@@ -21,12 +21,12 @@
       <div class="product-stats">
         <div class="stat">
           <span class="stat-num">8 M+</span>
-          <span class="stat-label">Monthly Visits</span>
+          <span class="stat-label">Monthly visits</span>
         </div>
         <div class="stat-divider"></div>
         <div class="stat">
           <span class="stat-num">81 k+</span>
-          <span class="stat-label">Daily Visits</span>
+          <span class="stat-label">Daily visits</span>
         </div>
       </div>
       <div class="products-dropdown">
@@ -53,6 +53,9 @@
     justify-content: center;
     align-items: center;
     width: 100%;
+    height: auto;
+    min-height: auto;
+    overflow: visible;
   }
 
   .product-inner {
