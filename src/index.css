@@ -44,6 +44,11 @@ section.blue {
   border-radius: 16px 16px 0 0;
 }
 
+section.landing {
+  width: 100%;
+  border-radius: 0;
+}
+
 @media (max-width: 768px) {
   section.landing {
     height: auto;
