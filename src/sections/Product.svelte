@@ -61,9 +61,9 @@
   .product-inner {
     display: flex;
     align-items: center;
+    justify-content: space-between;
     width: 100%;
-    max-width: 1100px;
-    padding: 0 2rem;
+    padding: 0 4rem;
   }
 
   .product-text {
