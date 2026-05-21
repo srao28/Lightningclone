@@ -44,14 +44,6 @@
     max-width: 850px;
   }
 
-  .eyebrow-yellow {
-    font-size: 0.85rem;
-    font-weight: 400;
-    letter-spacing: 0.15em;
-  
-    color: #fcc150;
-    margin: 0;
-  }
 
   .about-text h2 {
     font-size: clamp(2rem, 3.5vw, 3.25rem);
