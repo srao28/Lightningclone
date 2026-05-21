@@ -6,7 +6,7 @@
         <path d="M8 42c0-8.837 7.163-16 16-16s16 7.163 16 16" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
       </svg>
     </div>
-    <div class="text-box">
+    <div class="text-box text-box--sm">
       <span class="box-title">Why We Do It</span>
       <p class="box-desc">We want to bring stronger relationships between people by facilitating real connection</p>
     </div>
@@ -18,7 +18,7 @@
         <circle cx="24" cy="18" r="4" stroke="white" stroke-width="2.5"/>
       </svg>
     </div>
-    <div class="text-box">
+    <div class="text-box text-box--sm">
       <span class="box-title">Our Innovation</span>
       <p class="box-desc">We use AI to better moderate and keep our products clean by constantly using the cutting edge technology</p>
     </div>
@@ -33,7 +33,7 @@
         <path d="M17 28c3.866 0 7 6.268 7 14M31 28c-3.866 0-7 6.268-7 14" stroke="white" stroke-width="2.5" stroke-linecap="round"/>
       </svg>
     </div>
-    <div class="text-box">
+    <div class="text-box text-box--sm">
       <span class="box-title">The Team</span>
       <p class="box-desc">Our team is dedicated to innovation and moderation in helping people make true connections</p>
     </div>
