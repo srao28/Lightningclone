@@ -24,6 +24,8 @@
   <AboutUs on:navigate={(e) => navigate(e.detail)} />
 {:else if currentPage === 'products'}
   <Products />
+{:else if currentPage === 'support'}
+  <Support />
 {/if}
 
 <Footer />
