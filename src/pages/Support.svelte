@@ -21,11 +21,11 @@
     min-height: 40vh;
     height: auto;
     gap: .5rem;
-    padding: 8rem 2rem 8rem;
+    padding: 15rem 2rem 5rem;
   }
 
   .support-heading {
-    font-size: clamp(2rem, 3vw, 3rem);
+    font-size: clamp(4rem, 5vw, 5rem);
     font-weight: 300;
     color: #fff;
     margin: 0;
