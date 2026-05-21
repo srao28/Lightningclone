@@ -32,7 +32,7 @@
   .about-img {
     width: 50vw;
     height: auto;
-    max-height: 600px;
+    max-height: 750px;
     flex-shrink: 0;
     object-fit: contain;
     object-position: center;
