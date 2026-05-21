@@ -61,8 +61,8 @@
     flex-direction: column;
     justify-content: space-evenly;
     align-items: center;
-    padding: 4rem 0;
-    min-height: 100vh;
+    padding: 6rem 0 4rem;
+    min-height: 120vh;
   }
 
   .roadmap-circle {
