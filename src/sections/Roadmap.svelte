@@ -185,5 +185,20 @@
     .text-box {
       width: 100%;
     }
+
+    .roadmap-cta {
+      padding: 2rem 1.25rem;
+      width: 100%;
+    }
+
+    .roadmap-cta p {
+      font-size: clamp(1.75rem, 8vw, 3rem);
+      text-align: center;
+    }
+
+    .roadmap-cta :global(.hex-btn) {
+      font-size: 1.1rem;
+      width: 100%;
+    }
   }
 </style>
