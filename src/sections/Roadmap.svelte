@@ -133,8 +133,8 @@
   }
 
   .roadmap-cta p {
-    font-size: 5rem;
-    font-weight: 300;
+    font-size: 4rem;
+    font-weight: 200;
     line-height: 1.35;
     color: #fff;
     margin: 0;
@@ -142,8 +142,9 @@
   }
 
   .roadmap-cta :global(.hex-btn) {
-    font-size: 3rem;
-    padding: 2rem 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    padding: .5rem 1.5rem;
   }
 
   @media (max-width: 430px) {
@@ -183,6 +184,21 @@
     }
 
     .text-box {
+      width: 100%;
+    }
+
+    .roadmap-cta {
+      padding: 2rem 1.25rem;
+      width: 100%;
+    }
+
+    .roadmap-cta p {
+      font-size: clamp(1.75rem, 8vw, 3rem);
+      text-align: center;
+    }
+
+    .roadmap-cta :global(.hex-btn) {
+      font-size: 1.1rem;
       width: 100%;
     }
   }
