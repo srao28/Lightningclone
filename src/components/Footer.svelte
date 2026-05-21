@@ -120,7 +120,7 @@
   }
 
   .footer-links li {
-    font-size: 0.95rem;
+    font-size: 1.1rem;
     color: rgba(255, 255, 255, 0.7);
     cursor: pointer;
     transition: color 0.15s;
