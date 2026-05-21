@@ -24,10 +24,9 @@
 </script>
 
 <div class="nav-wrapper">
+  <img src={logo} alt="Lightningware" class="nav-logo" />
   <nav>
-    <div class="nav-left">
-      <img src={logo} alt="Lightningware" class="nav-logo" />
-    </div>
+    <div class="nav-left"></div>
     <div class="nav-center">
       <button class:active={currentPage === 'home'} on:click={() => navigate('home')}>Home</button>
       <button class:active={currentPage === 'about'} on:click={() => navigate('about')}>About Us</button>
