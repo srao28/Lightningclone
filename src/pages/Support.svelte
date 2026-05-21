@@ -20,8 +20,8 @@
     justify-content: center;
     min-height: 40vh;
     height: auto;
-    gap: 1rem;
-    padding: 4rem 2rem 8rem;
+    gap: .5rem;
+    padding: 8rem 2rem 8rem;
   }
 
   .support-heading {
