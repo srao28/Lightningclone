@@ -1,5 +1,5 @@
 <section class="pillars">
-  <div class="box-unit">
+  <div class="box-unit box-unit--sm">
     <div class="gif-box">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-svg">
         <circle cx="24" cy="18" r="10" stroke="white" stroke-width="2.5"/>
@@ -11,7 +11,7 @@
       <p class="box-desc">We want to bring stronger relationships between people by facilitating real connection</p>
     </div>
   </div>
-  <div class="box-unit">
+  <div class="box-unit box-unit--sm">
     <div class="gif-box">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-svg">
         <path d="M24 4C16.268 4 10 10.268 10 18c0 10 14 26 14 26s14-16 14-26c0-7.732-6.268-14-14-14z" stroke="white" stroke-width="2.5"/>
@@ -23,7 +23,7 @@
       <p class="box-desc">We use AI to better moderate and keep our products clean by constantly using the cutting edge technology</p>
     </div>
   </div>
-  <div class="box-unit">
+  <div class="box-unit box-unit--sm">
     <div class="gif-box">
       <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" class="box-svg">
         <circle cx="17" cy="16" r="7" stroke="white" stroke-width="2.5"/>
