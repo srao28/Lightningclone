@@ -86,10 +86,8 @@
       max-width: 100%;
       position: relative;
       z-index: 2;
-      background: rgba(3, 13, 34, 0.75);
-      border-radius: 12px;
-      padding: 1.5rem;
-      margin-bottom: -60px;
+      padding: 1.5rem 0;
+      margin-bottom: 0;
     }
 
     .about-text h2 {
