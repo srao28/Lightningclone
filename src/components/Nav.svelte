@@ -95,9 +95,11 @@
     height: 8rem;
     width: auto;
     display: block;
-    overflow: visible;
-    position: relative;
-    margin-top: 1.5rem;
+    position: absolute;
+    top: -1rem;
+    left: 1.5rem;
+    z-index: 101;
+    pointer-events: all;
   }
 
   .nav-center {
