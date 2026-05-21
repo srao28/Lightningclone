@@ -9,7 +9,7 @@
   .cta-outer {
     width: 100%;
     background: #000a28;
-    padding: 60px 0 120px;
+    padding: 4rem 0rem 6rem;
     display: flex;
     flex-direction: column;
     align-items: center;
