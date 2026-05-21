@@ -50,7 +50,7 @@
     position: relative;
     overflow: visible;
     height: auto;
-    min-height: 100vh;
+    min-height: 140vh;
   }
 
   .roadmap-content {
@@ -83,6 +83,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: -6rem
   }
 
   .roadmap-bottom-boxes {
