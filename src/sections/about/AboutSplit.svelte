@@ -21,7 +21,7 @@
     min-height: unset;
     background: #030d22;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     gap: 0rem;
     padding: 1rem 1rem;
     overflow: visible;
@@ -31,7 +31,8 @@
 
   .about-img {
     width: 50vw;
-    height: 800px;
+    height: auto;
+    max-height: 600px;
     flex-shrink: 0;
     object-fit: contain;
     object-position: center;
@@ -41,15 +42,15 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    align-self: flex-start;
+    align-self: center;
     gap: 1rem;
     width: 50vw;
   }
 
 
   .about-text h2 {
-    font-size: clamp(2rem, 3.5vw, 3.25rem);
-    font-weight: 500;
+    font-size: clamp(4rem, 4.5vw, 6.25rem);
+    font-weight: 400;
     color: #fff;
     margin: 0;
     line-height: 1.15;
@@ -57,9 +58,9 @@
   }
 
   .about-text p {
-    font-size: 1.05rem;
+    font-size: 1.2rem;
     line-height: 1.75;
-    color: rgba(255, 255, 255, 0.75);
+    color: rgb(255, 255, 255);
     margin: 0;
   }
 
