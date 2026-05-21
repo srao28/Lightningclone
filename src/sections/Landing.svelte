@@ -56,7 +56,7 @@
   }
 
   .landing-inner {
-    flex: 0 0 auto;
+    flex: 1 1 auto;
     min-width: 0;
     z-index: 2;
   }
