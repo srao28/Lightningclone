@@ -1,6 +1,8 @@
 <script>
   import thundrPhone from '../images/thundr-phone.png';
 
+  export let description = "Thundr is a revolutionary social platform that allows users to meet and talk to new people worldwide. With AI-powered moderation and a seamless user experience, Thundr makes conversations effortless, safe, and engaging.";
+
   let productsOpen = false;
 
   function toggleProducts() {
