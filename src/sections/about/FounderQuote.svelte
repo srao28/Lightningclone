@@ -11,7 +11,8 @@
     width: 100%;
     background: #000a28;
     padding: 0px 0px 0px;
-    margin-top: -120px;
+    margin-top: -10rem;
+    margin-bottom: -4rem;
     display: flex;
     justify-content: center;
   }
