@@ -82,6 +82,7 @@
     }
 
     .about-text {
+      width: 100%;
       max-width: 100%;
       position: relative;
       z-index: 2;
@@ -89,6 +90,14 @@
       border-radius: 12px;
       padding: 1.5rem;
       margin-bottom: -60px;
+    }
+
+    .about-text h2 {
+      font-size: clamp(2rem, 9vw, 3.5rem);
+    }
+
+    .about-text p {
+      font-size: 1rem;
     }
 
     .about-img {
