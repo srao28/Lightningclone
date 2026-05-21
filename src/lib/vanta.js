@@ -13,7 +13,7 @@ export async function initVanta(el) {
     color: 0xfde047,
     color2: 0xfacc15,
     backgroundColor: 0x030d22,
-    size: 1.2,
+    size: 1.8,
     maxDistance: 1,
     points: 0,
   });
