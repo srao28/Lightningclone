@@ -48,9 +48,9 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 3rem 0 5rem;
-    gap: 2rem;
+    justify-content: center;
+    padding: 0 2rem 0 5rem;
+    gap: 4rem;
     width: 100%;
     overflow: hidden;
   }
@@ -65,7 +65,6 @@
     flex: 0 0 auto;
     width: 70vh;
     height: 70vh;
-    max-width: 50%;
     position: relative;
   }
 
