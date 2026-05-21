@@ -79,7 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 5rem;
+    padding: 0 1.5rem;
     background: #001f7f;
     pointer-events: all;
     clip-path: polygon(20px 0%, calc(100% - 20px) 0%, 100% 50%, calc(100% - 20px) 100%, 20px 100%, 0% 50%);
